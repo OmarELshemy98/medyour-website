@@ -8,12 +8,12 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-gradient-to-r from-teal-800 via-teal-600 to-emerald-600 shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-gradient-to-r from-[#006778] via-[#005071] to-[#003439] shadow-md">
+      <div className="max-w-7xl mx-4 px-2 sm:px-4 lg:px-6">
         <div className="flex justify-between h-16">
-          <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0 flex items-center gap-2 hover:opacity-90 transition-opacity">
-              <div className="flex items-center">
+          <div className="flex items-center -ml-2">
+            <Link href="/" className="flex-shrink-0 flex items-start hover:opacity-90 transition-opacity">
+              <div className="flex items-start">
                 <Image
                   src="/images/logo.png"
                   alt="MedYour Logo"
@@ -22,7 +22,6 @@ const Navbar = () => {
                   className="object-contain"
                   priority
                 />
-               
               </div>
             </Link>
           </div>
@@ -43,13 +42,13 @@ const Navbar = () => {
             </Link>
             <Link 
               href="/contact" 
-              className="bg-white text-[#005071] px-4 py-2 rounded-md ml-4 hover:bg-gray-100"
+              className="bg-white text-[#005071]   px-5 py-1 rounded-sm ml-4 hover:bg-gray-100"
             >
               Contact Us
             </Link>
             <Link 
               href="/get-started" 
-              className="bg-[#001218] text-white px-4 py-2 rounded-md hover:bg-teal-800"
+              className="bg-[#001218] text-white px-5 py-1 rounded-sm hover:bg-teal-800"
             >
               Get Started
             </Link>
