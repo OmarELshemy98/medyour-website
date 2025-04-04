@@ -14,17 +14,15 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center gap-2 hover:opacity-90 transition-opacity">
               <div className="flex items-center">
-                <svg width="40" height="40" viewBox="0 0 40 40" className="transform scale-110" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 30C12 30 6 25 6 20C6 15 9 12 12 12C15 12 18 15 18 20C18 15 21 12 24 12C27 12 30 15 30 20C30 25 24 30 24 30C21 33 15 33 12 30Z" fill="#00A651"/>
-                  <path d="M18 28C18 28 12 23 12 18C12 13 15 10 18 10C21 10 24 13 24 18C24 13 27 10 30 10C33 10 36 13 36 18C36 23 30 28 30 28C27 31 21 31 18 28Z" fill="#FBB03B" fillOpacity="0.9"/>
-                  <path d="M6 28C6 28 0 23 0 18C0 13 3 10 6 10C9 10 12 13 12 18C12 13 15 10 18 10C21 10 24 13 24 18C24 23 18 28 18 28C15 31 9 31 6 28Z" fill="#29ABE2" fillOpacity="0.9"/>
-                </svg>
-                <div className="flex flex-col ml-3">
-                  <span className="text-2xl font-bold text-white tracking-wider">
-                    edyour
-                  </span>
-                  <span className="text-xs text-white/90 -mt-1 tracking-wider">Healthcare Solutions</span>
-                </div>
+                <Image
+                  src="/images/logo.png"
+                  alt="MedYour Logo"
+                  width={150}
+                  height={50}
+                  className="object-contain"
+                  priority
+                />
+               
               </div>
             </Link>
           </div>
