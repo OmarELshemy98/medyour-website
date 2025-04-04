@@ -18,12 +18,19 @@ const ContactPage: FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log(formData);
+    // Here you can add your form submission logic
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header Section remains the same */}
-      
+      {/* Header Section */}
+      <div className="text-center py-16 bg-gradient-to-r from-[#006778] to-[#003439]">
+        <h1 className="text-4xl font-bold text-white mb-4">Get in Touch</h1>
+        <p className="text-white text-lg max-w-2xl mx-auto px-4">
+          We're here to help! For inquiries, please fill out our contact form or reach us directly
+        </p>
+      </div>
+
       <div className="max-w-2xl mx-auto px-4 py-16">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="flex items-start ">
