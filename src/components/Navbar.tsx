@@ -8,7 +8,15 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-gradient-to-r from-[#006778] via-[#005071] to-[#003439] shadow-md">
+    <nav 
+      className="shadow-md relative"
+      style={{
+        backgroundImage: 'url("/navbar-background.png")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
       <div className="max-w-7xl mx-4 px-2 sm:px-4 lg:px-6">
         <div className="flex justify-between h-16">
           <div className="flex items-center -ml-2">
