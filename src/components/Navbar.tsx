@@ -3,18 +3,21 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
+import { useNavbar } from '../context/NavbarContext';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { navbarBackground } = useNavbar();
 
   return (
     <nav 
-      className="shadow-md relative"
+      className="relative z-10"
       style={{
-        backgroundImage: 'url("/navbar-background.png")',
+        backgroundImage: navbarBackground || 'none',
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
+        backgroundPosition: 'top center',
+        backgroundRepeat: 'no-repeat',
+        backgroundColor: navbarBackground ? 'transparent' : '#003439'
       }}
     >
       <div className="max-w-7xl mx-4 px-2 sm:px-4 lg:px-6">
