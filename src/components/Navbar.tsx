@@ -1,118 +1,79 @@
 "use client";
 
 import Link from 'next/link';
-import { useState } from 'react';
 import Image from 'next/image';
-import { useNavbar } from '../context/NavbarContext';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { navbarBackground } = useNavbar();
-
   return (
     <nav 
       className="relative z-10"
       style={{
-        backgroundImage: navbarBackground || 'none',
+        backgroundImage: `url('/images/navbarBackground.png')`,
         backgroundSize: 'cover',
-        backgroundPosition: 'top center',
-        backgroundRepeat: 'no-repeat',
-        backgroundColor: navbarBackground ? 'transparent' : '#003439'
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
       }}
     >
-      <div className="max-w-7xl mx-4 px-2 sm:px-4 lg:px-6">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center -ml-2">
-            <Link href="/" className="flex-shrink-0 flex items-start hover:opacity-90 transition-opacity">
-              <div className="flex items-start">
-                <Image
-                  src="/images/logo.png"
-                  alt="MedYour Logo"
-                  width={150}
-                  height={50}
-                  className="object-contain"
-                  priority
-                />
-              </div>
+      <div className="max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center py-4">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link href="/" className="block">
+              <Image
+                src="/images/logo.png"
+                alt="MedYour Logo"
+                width={150}
+                height={50}
+                className="w-[90px] sm:w-[110px] md:w-[140px] h-auto object-contain"
+                priority
+              />
             </Link>
           </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Link href="/about" className="text-white hover:text-gray-200 px-3 py-2">
-              About Us
-            </Link>
-            <Link href="/services" className="text-white hover:text-gray-200 px-3 py-2">
-              Services
-            </Link>
-            <Link href="/challenges" className="text-white hover:text-gray-200 px-3 py-2">
-              Healthcare Challenges
-            </Link>
-            <Link href="/why-medyour" className="text-white hover:text-gray-200 px-3 py-2">
-              Why MedYour?
-            </Link>
+          {/* Main Navigation */}
+          <div className="hidden md:flex items-center justify-center pl-16 pr-8 flex-1">
+            <div className="flex space-x-12">
+              <Link href="/about" className="text-white text-sm hover:text-gray-200">
+                About Us
+              </Link>
+              <Link href="/services" className="text-white text-sm hover:text-gray-200">
+                Services
+              </Link>
+              <Link href="/challenges" className="text-white text-sm hover:text-gray-200">
+                Healthcare Challenges
+              </Link>
+              <Link href="/why-medyour" className="text-white text-sm hover:text-gray-200">
+                Why MedYour?
+              </Link>
+            </div>
+          </div>
+
+          {/* Action Buttons */}
+          <div className="hidden md:flex items-center space-x-3 absolute right-8">
             <Link 
               href="/contact" 
-              className="bg-white text-[#005071]   px-5 py-1 rounded-sm ml-4 hover:bg-gray-100"
+              className="bg-white text-[#005071] px-5 py-1.5 rounded-sm text-sm"
             >
               Contact Us
             </Link>
             <Link 
               href="/get-started" 
-              className="bg-[#001218] text-white px-5 py-1 rounded-sm hover:bg-teal-800"
+              className="bg-[#001218] text-white px-5 py-1.5 rounded-sm text-sm border border-[#002a35]"
             >
               Get Started
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-200 hover:bg-teal-700 focus:outline-none"
-            >
-              <svg
-                className="h-6 w-6"
-                stroke="currentColor"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                {isMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
+          <div className="md:hidden">
+            <button className="text-white">
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
           </div>
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-teal-700">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            <Link href="/about" className="block text-white hover:bg-teal-600 px-3 py-2 rounded-md">
-              About Us
-            </Link>
-            <Link href="/services" className="block text-white hover:bg-teal-600 px-3 py-2 rounded-md">
-              Services
-            </Link>
-            <Link href="/challenges" className="block text-white hover:bg-teal-600 px-3 py-2 rounded-md">
-              Healthcare Challenges
-            </Link>
-            <Link href="/why-medyour" className="block text-white hover:bg-teal-600 px-3 py-2 rounded-md">
-              Why MedYour?
-            </Link>
-            <Link href="/contact" className="block text-white hover:bg-teal-600 px-3 py-2 rounded-md">
-              Contact Us
-            </Link>
-            <Link href="/get-started" className="block text-white hover:bg-teal-600 px-3 py-2 rounded-md">
-              Get Started
-            </Link>
-          </div>
-        </div>
-      )}
     </nav>
   );
 };
