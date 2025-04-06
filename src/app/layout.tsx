@@ -21,10 +21,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={geistSans.className}>
+      <body 
+        className={geistSans.className}
+        style={{
+          backgroundImage: `url('/images/backgroundImg.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'top',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed'
+        }}
+      >
         <NavbarProvider>
           <Navbar />
-          <main>{children}</main>
+          <main className="pt-[85px]">
+            {children}
+          </main>
           <Footer />
         </NavbarProvider>
       </body>
