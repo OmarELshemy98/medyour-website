@@ -31,9 +31,9 @@ const ContactPage: FC = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          marginTop: '-5rem',
-          paddingTop: '5rem',
-          height: '40vh',
+          marginTop: '-6.5rem',
+          paddingTop: '6.5rem',
+          height: '60vh',
         }}
       >
         <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-[90rem] mx-auto px-4 sm:px-8 py-8 sm:py-12">

@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Navigation Links */}
           <div className="flex space-x-6">
-            <Link href="/about" className="hover:text-gray-300">
+            <Link href="/" className="hover:text-gray-300">
               About Us
             </Link>
             <Link href="/services" className="hover:text-gray-300">

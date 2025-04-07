@@ -10,30 +10,38 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const pathname = usePathname();
-  const isSpecialPage = pathname === '/contact' || pathname === '/faqs';  // Add FAQs to special pages
 
   useEffect(() => {
     setIsMounted(true);
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 0);  // Change to 0 for immediate effect
+      setIsScrolled(window.scrollY > 0);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navLinks = [
+    { href: '/', label: 'About Us' },
+    { href: '/services', label: 'Services' },
+    { href: '/challenges', label: 'Healthcare Challenges' },
+    { href: '/why-medyour', label: 'Why MedYour?' }
+  ];
+
+  if (!isMounted) {
+    return null;
+  }
+
   return (
     <nav 
       className={`fixed top-0 z-50 h-[85px] w-full transition-all duration-300 ${
-        (!isMounted || (isSpecialPage && !isScrolled)) ? 'bg-transparent' : 'bg-[#001218]/95'
+        isScrolled ? 'bg-[#001218]/95' : 'bg-transparent'
       }`}
-      style={!isMounted ? {} : {
-        backgroundImage: (isSpecialPage && !isScrolled) ? 'none' : `url('/images/backgroundImg.png')`,
+      style={{
+        backgroundImage: isScrolled ? `url('/images/backgroundImg.png')` : 'none',
         backgroundSize: 'cover',
         backgroundPosition: 'top',
-        backgroundRepeat: 'no-repeat',
-        backgroundColor: (isSpecialPage && !isScrolled) ? 'transparent' : undefined
+        backgroundRepeat: 'no-repeat'
       }}
     >
       <div className="max-w-[1440px] mx-auto h-full px-6">
@@ -72,21 +80,36 @@ const Navbar = () => {
           {/* Rest of the navbar content */}
           <div className="hidden md:flex justify-center flex-1 ml-8">
             <div className="flex space-x-12 ml-5 mr-5 items-center">
-              <Link href="/about" className="text-white text-[13px] font-medium hover:text-gray-200">
-                About Us
-              </Link>
-              <Link href="/services" className="text-white text-[13px] font-medium hover:text-gray-200">
-                Services
-              </Link>
-              <Link href="/challenges" className="text-white text-[13px] font-medium hover:text-gray-200">
-                Healthcare Challenges
-              </Link>
-              <Link href="/why-medyour" className="text-white text-[13px] font-medium hover:text-gray-200">
-                Why MedYour?
-              </Link>
+              {navLinks.map((link) => (
+                <Link 
+                  key={link.href}
+                  href={link.href}
+                  className="text-white text-[13px] font-medium hover:text-gray-200"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </div>
 
+          {/* Mobile Menu */}
+          {isMobileMenuOpen && (
+            <div className="fixed top-0 left-0 w-full h-screen md:hidden z-50 overflow-y-auto bg-[#001218]">
+              <div className="flex flex-col items-center px-6 py-8 space-y-6">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-white text-lg hover:text-gray-200 text-center"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+          
           {/* Action Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <Link 
@@ -126,18 +149,9 @@ const Navbar = () => {
                 </svg>
               </button>
             </div>
+            {/* Update in mobile menu as well */}
             <div className="flex flex-col items-center px-6 py-8 space-y-6">
-              <Link href="/" className="mb-8">
-                <Image
-                  src="/images/logo.png"
-                  alt="MedYour Logo"
-                  width={150}
-                  height={50}
-                  className="w-[130px] h-auto object-contain"
-                  priority
-                />
-              </Link>
-              <Link href="/about" className="text-white text-lg hover:text-gray-200 text-center">
+              <Link href="/" className="text-white text-lg hover:text-gray-200 text-center">
                 About Us
               </Link>
               <Link href="/services" className="text-white text-lg hover:text-gray-200 text-center">
