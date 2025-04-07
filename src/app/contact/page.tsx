@@ -101,13 +101,25 @@ const ContactPage: FC = () => {
 
         <div className="relative mt-8">
           <div className="flex items-center w-full mb-8">
-            <div className="w-[35%] border-t-[2px] border-dashed border-[#3A6070] opacity-30"></div>
-            <div className="w-[30%] flex items-center">
+            <div className="flex-1" style={{ 
+              borderTop: '2px dashed #3A6070',
+              opacity: 0.3,
+              backgroundSize: '20px 2px',
+              backgroundPosition: 'top',
+              height: '1px'
+            }}></div>
+            <div className="flex items-center">
               <div className="w-[2px] h-[10px] bg-[#3A6070]"></div>
-              <div className="flex-1 border-t-[2px] border-solid border-[#3A6070]"></div>
+              <div className="w-[300px] border-t border-[#3A6070]"></div>
               <div className="w-[2px] h-[10px] bg-[#3A6070]"></div>
             </div>
-            <div className="w-[35%] border-t-[2px] border-dashed border-[#3A6070] opacity-30"></div>
+            <div className="flex-1" style={{ 
+              borderTop: '2px dashed #3A6070',
+              opacity: 0.3,
+              backgroundSize: '20px 2px',
+              backgroundPosition: 'top',
+              height: '1px'
+            }}></div>
           </div>
           <h2 className="text-[#003439] text-xl font-semibold mb-2 mt-8">Follow Us:</h2>
           <p className="text-gray-700 mb-8">
