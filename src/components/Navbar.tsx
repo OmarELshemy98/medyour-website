@@ -10,30 +10,30 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const pathname = usePathname();
-  const isContactPage = pathname === '/contact';
+  const isSpecialPage = pathname === '/contact' || pathname === '/faqs';  // Add FAQs to special pages
 
   useEffect(() => {
     setIsMounted(true);
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 400);
+      setIsScrolled(scrollPosition > 0);  // Change to 0 for immediate effect
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Move navStyle inside the return statement to ensure consistent rendering
   return (
     <nav 
       className={`fixed top-0 z-50 h-[85px] w-full transition-all duration-300 ${
-        (!isMounted || (isContactPage && !isScrolled)) ? 'bg-transparent' : 'bg-[#001218]/95'
+        (!isMounted || (isSpecialPage && !isScrolled)) ? 'bg-transparent' : 'bg-[#001218]/95'
       }`}
       style={!isMounted ? {} : {
-        backgroundImage: (isContactPage && !isScrolled) ? 'none' : `url('/images/backgroundImg.png')`,
+        backgroundImage: (isSpecialPage && !isScrolled) ? 'none' : `url('/images/backgroundImg.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'top',
         backgroundRepeat: 'no-repeat',
+        backgroundColor: (isSpecialPage && !isScrolled) ? 'transparent' : undefined
       }}
     >
       <div className="max-w-[1440px] mx-auto h-full px-6">

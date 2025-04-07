@@ -20,37 +20,60 @@ const FAQsPage: FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header Section */}
-      <div className="text-center py-16 bg-gradient-to-r from-[#006778] to-[#003439]">
-        <h1 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h1>
-        <p className="text-white text-lg max-w-2xl mx-auto px-4">
-          MedYour is dedicated to addressing significant challenges in the healthcare landscape
-        </p>
+    <div className="min-h-screen bg-white">
+      <div 
+        className="text-center relative w-full flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: `url('/images/backgroundImg.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          marginTop: '-6.5rem',  // Match contact page
+          paddingTop: '6.5rem',  // Match contact page
+          height: '60vh',
+        }}
+      >
+        <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-[90rem] mx-auto px-8 py-12">
+          <h1 className="text-[2.4375rem] font-[900] text-white mb-10 font-roboto leading-[4.375rem] tracking-[0%]">Frequently Asked Questions</h1>
+          <p className="text-[#FFFFFF] text-[2.125rem] font-[300] leading-[2.875rem] tracking-[0%] w-full max-w-[70rem] mx-auto text-center font-roboto">
+            MedYour is dedicated to addressing significant challenges in the healthcare landscape
+          </p>
+        </div>
       </div>
 
-      {/* FAQs Section */}
-      <div className="max-w-3xl mx-auto px-4 py-16">
+      <div className="max-w-2xl mx-auto px-4 py-16">
         <div className="space-y-8">
           {faqs.map((faq, index) => (
             <div key={index}>
               <div className="pb-8">
-                <h3 className="text-[#003439] text-xl font-medium mb-4">
+                <h3 className="text-[#003439] text-xl font-medium mb-4 font-roboto">
                   {faq.question}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed font-roboto">
                   {faq.answer}
                 </p>
               </div>
               {index !== faqs.length - 1 && (
                 <div className="flex items-center w-full mb-8">
-                  <div className="w-[40%]  border-t-2 border-dotted border-gray-300"></div>
-                  <div className="w-[40%] flex items-center">
-                    <div className="w-[3px] h-[14px] bg-gray-300"></div>
-                    <div className="flex-1 border-t-2 border-solid border-gray-300"></div>
-                    <div className="w-[3px] h-[14px] bg-gray-300"></div>
+                  <div className="flex-1" style={{ 
+                    borderTop: '2px dashed #3A6070',
+                    opacity: 0.3,
+                    backgroundSize: '20px 2px',
+                    backgroundPosition: 'top',
+                    height: '1px'
+                  }}></div>
+                  <div className="flex items-center">
+                    <div className="w-[2px] h-[10px] bg-[#3A6070]"></div>
+                    <div className="w-[300px] border-t border-[#3A6070]"></div>
+                    <div className="w-[2px] h-[10px] bg-[#3A6070]"></div>
                   </div>
-                  <div className="w-[30%] border-t-2 border-dotted border-gray-300"></div>
+                  <div className="flex-1" style={{ 
+                    borderTop: '2px dashed #3A6070',
+                    opacity: 0.3,
+                    backgroundSize: '20px 2px',
+                    backgroundPosition: 'top',
+                    height: '1px'
+                  }}></div>
                 </div>
               )}
             </div>
