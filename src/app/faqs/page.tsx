@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import type { FC } from 'react';
+import PageHeader from '@/components/shared/PageHeader';
 
 const FAQsPage: FC = () => {
   const faqs = [
@@ -21,27 +22,10 @@ const FAQsPage: FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <div 
-        className="text-center relative w-full flex items-center justify-center overflow-hidden"
-        style={{
-          backgroundImage: `url('/images/backgroundImg.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          marginTop: '-6.5rem',
-          paddingTop: '6.5rem',
-          height: '60vh',
-        }}
-      >
-        <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-[90rem] mx-auto px-4 sm:px-8 py-8 sm:py-12">
-          <h1 className="text-[1.8rem] sm:text-[2.4375rem] font-[900] text-white mb-6 sm:mb-10 font-roboto leading-[3rem] sm:leading-[4.375rem] tracking-[0%]">
-            Frequently Asked Questions
-          </h1>
-          <p className="text-[#FFFFFF] text-[1.5rem] sm:text-[2.125rem] font-[300] leading-[2rem] sm:leading-[2.875rem] tracking-[0%] w-full max-w-[70rem] mx-auto text-center font-roboto">
-            MedYour is dedicated to addressing significant challenges in the healthcare landscape
-          </p>
-        </div>
-      </div>
+      <PageHeader 
+        title="Frequently Asked Questions"
+        description="MedYour is dedicated to addressing significant challenges in the healthcare landscape"
+      />
 
       <div className="max-w-[1200px] mx-auto px-4 py-8 sm:py-16">
         <div className="space-y-12 sm:space-y-20">

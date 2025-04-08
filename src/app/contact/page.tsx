@@ -4,8 +4,8 @@ import { useState } from 'react';
 import type { FC } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// Update imports
 import { faFacebookF, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import PageHeader from '@/components/shared/PageHeader';
 
 const ContactPage: FC = () => {
   const [formData, setFormData] = useState({
@@ -23,26 +23,10 @@ const ContactPage: FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header Section */}
-      <div 
-        className="text-center relative w-full flex items-center justify-center overflow-hidden"
-        style={{
-          backgroundImage: `url('/images/backgroundImg.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          marginTop: '-6.5rem',
-          paddingTop: '6.5rem',
-          height: '60vh',
-        }}
-      >
-        <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-[90rem] mx-auto px-4 sm:px-8 py-8 sm:py-12">
-          <h1 className="text-[1.75rem] sm:text-[2.4375rem] font-[900] text-white mb-6 sm:mb-10 font-roboto leading-[2.5rem] sm:leading-[4.375rem] tracking-[0%]">Get in Touch</h1>
-          <p className="text-[#FFFFFF] text-[1.25rem] sm:text-[2.125rem] font-[300] leading-[1.75rem] sm:leading-[2.875rem] tracking-[0%] w-full max-w-[70rem] mx-auto text-center font-roboto">
-            We're here to help! For inquiries, please fill out our contact form or reach us directly
-          </p>
-        </div>
-      </div>
+      <PageHeader 
+        title="Get in Touch"
+        description="We're here to help! For inquiries, please fill out our contact form or reach us directly"
+      />
 
       <div className="max-w-2xl mx-auto px-4 py-6 sm:py-16">
         <form onSubmit={handleSubmit} className="space-y-5">

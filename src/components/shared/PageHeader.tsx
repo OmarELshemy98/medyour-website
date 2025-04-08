@@ -6,17 +6,18 @@ interface PageHeaderProps {
   backgroundImage?: string;
 }
 
-const PageHeader: FC<PageHeaderProps> = ({ title, description }) => {
+const PageHeader: FC<PageHeaderProps> = ({ title, description, backgroundImage = '/images/backgroundImg.png' }) => {
   return (
     <div 
       className="text-center relative w-full flex items-center justify-center overflow-hidden min-h-[350px] h-[60vh] md:h-[50vh] lg:h-[45vh]"
       style={{
-        backgroundImage: `url('/images/background.jpg')`, // Using the common background image
+        backgroundImage: `url('${backgroundImage}')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        marginTop: '-5rem',
-        paddingTop: '6rem',
+        marginTop: '-6.5rem',
+        paddingTop: '6.5rem',
+        height: '60vh',
       }}
     >
       <div className="absolute inset-0 bg-black/50" /> {/* Add overlay for better text visibility */}

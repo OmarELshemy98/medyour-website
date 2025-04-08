@@ -2,30 +2,16 @@
 
 import { FC } from 'react';
 import Image from 'next/image';
+import PageHeader from '@/components/shared/PageHeader';
 
 const ServicesPage: FC = () => {
   return (
     <main className="min-h-screen bg-white">
       {/* Header Section */}
-      <div 
-        className="text-center relative w-full flex items-center justify-center overflow-hidden"
-        style={{
-          backgroundImage: `url('/images/backgroundImg.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          marginTop: '-5rem',
-          paddingTop: '5rem',
-          height: '280px',
-        }}
-      >
-        <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-[90rem] mx-auto px-4 sm:px-8 py-8 sm:py-12">
-          <h1 className="text-[1.75rem] sm:text-[2.4375rem] font-[900] text-white mb-6 sm:mb-10 font-roboto leading-[2.5rem] sm:leading-[4.375rem] tracking-[0%]">Our Services</h1>
-          <p className="text-[#FFFFFF] text-[1.25rem] sm:text-[2.125rem] font-[300] leading-[1.75rem] sm:leading-[2.875rem] tracking-[0%] w-full max-w-[70rem] mx-auto text-center font-roboto">
-            Our innovative mobile app along with our digital healthcare system is used to solve real-world issues, built for rapid population scaling to give access to healthcare services at a low cost
-          </p>
-        </div>
-      </div>
+      <PageHeader 
+        title="Our Services"
+        description="Our innovative mobile app along with our digital healthcare system is used to solve real-world issues, built for rapid population scaling to give access to healthcare services at a low cost"
+      />
 
       <div className="max-w-6xl mx-auto py-20 px-4">
         {/* Mobile App Section */}
