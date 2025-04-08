@@ -36,7 +36,7 @@ export const benefits: BenefitType[] = [
   },
   {
     icon: ConvenientIcon,
-    title: ["Convenient", "Healthcare"],
+    title: ["Convenient", "Online Payment" , "Options"],
     description: "Access healthcare services anytime, anywhere through our comprehensive digital platform.",
     color: "#2196F3"  // Blue color for Convenient icon
   },

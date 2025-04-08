@@ -28,7 +28,7 @@ const BenefitCard: FC<BenefitCardProps> = ({ benefit, color }) => {
                 ))}
               </h3>
             </div>
-            <div className="flex-1 flex items-start pl-8 mt-28">
+            <div className="flex-1 flex items-start pl-8 mt-28 ml-8">
               <p className="text-[#00313B] text-[18px] leading-[24px] font-normal font-roboto max-w-[400px]">
                 {benefit.description}
               </p>
