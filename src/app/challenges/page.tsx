@@ -1,35 +1,40 @@
 "use client";
 
 import { FC } from 'react';
-import Image from 'next/image';
 import PageHeader from '@/components/shared/PageHeader';
+import { LineSeparator } from '@/components/shared/Separators';
+import CostIcon from './components/icons/CostIcon';
+import InclusivityIcon from './components/icons/InclusivityIcon';
+import FinancialIcon from './components/icons/FinancialIcon';
+import AdminIcon from './components/icons/AdminIcon';
+import ProviderIcon from './components/icons/ProviderIcon'; // Import the ProviderIcon
 
 const ChallengesPage: FC = () => {
   const challenges = [
     {
       title: "Escalating Healthcare Costs",
-      description: "Rising medical expenses create barriers to accessing quality healthcare services.",
-      icon: "/images/challenges/cost.png"
+      description: "Offering affordable, comprehensive coverage to combat rising healthcare expenses.",
+      icon: <CostIcon />
     },
     {
-      title: "Industry Stage",
-      description: "The healthcare landscape faces significant challenges in digital transformation.",
-      icon: "/images/challenges/industry.png"
+      title: "Inclusivity Gaps",
+      description: "Recognizing that most individuals face barriers in accessing proper healthcare, the goal is to close these gaps and make top-quality services available to all.",
+      icon: <InclusivityIcon />
     },
     {
       title: "Financial Limitations",
-      description: "Many patients struggle with healthcare costs, making it hard to access needed care.",
-      icon: "/images/challenges/financial.png"
+      description: "Plans are tailored to remove financial barriers, making high-quality care accessible to everyone.",
+      icon: <FinancialIcon />
     },
     {
-      title: "Administrative Systems",
-      description: "A streamlined digital platform enhances efficiency and improves the overall healthcare experience.",
-      icon: "/images/challenges/admin.png"
+      title: "Administrative Burdens",
+      description: "A streamlined digital platform eliminates paperwork, enhances efficiency, and simplifies the healthcare experience.",
+      icon: <AdminIcon />
     },
     {
       title: "Provider Accessibility",
-      description: "Access to healthcare services is limited by geographical and technological barriers.",
-      icon: "/images/challenges/provider.png"
+      description: "Access to healthcare providers is made easier, helping individuals connect with the care they need.",
+      icon: <ProviderIcon /> // Use the ProviderIcon
     }
   ];
 
@@ -41,40 +46,19 @@ const ChallengesPage: FC = () => {
       />
 
       <div className="max-w-6xl mx-auto py-20 px-4">
-        <div className="grid gap-16">
+        <div className="space-y-16">
           {challenges.map((challenge, index) => (
-            <div key={index} className="relative">
-              {/* Decorative elements */}
-              {index % 2 === 0 && (
-                <>
-                  <div className="absolute -left-8 top-1/2 w-4 h-4 bg-[#00FF85] rounded-full transform -translate-y-1/2" />
-                  <div className="absolute -right-8 top-1/2 w-4 h-4 bg-[#FFB800] rounded-full transform -translate-y-1/2" />
-                </>
-              )}
-              {index % 2 === 1 && (
-                <>
-                  <div className="absolute -left-8 top-1/2 w-4 h-4 bg-[#00E5FF] rounded-full transform -translate-y-1/2" />
-                  <div className="absolute -right-8 top-1/2 w-4 h-4 bg-[#0066FF] rounded-full transform -translate-y-1/2" />
-                </>
-              )}
-              <div className="bg-white rounded-[20px] p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="flex flex-col md:flex-row items-center gap-8">
-                  <div className="w-full md:w-1/3 flex justify-center">
-                    <div className="relative w-[200px] h-[200px]">
-                      <Image
-                        src={challenge.icon}
-                        alt={challenge.title}
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-                  </div>
-                  <div className="w-full md:w-2/3 text-center md:text-left">
-                    <h2 className="text-[#005071] text-2xl font-bold mb-4">{challenge.title}</h2>
-                    <p className="text-gray-600 text-lg">{challenge.description}</p>
-                  </div>
+            <div key={index} className="flex flex-col items-center">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="w-full md:w-1/3 flex justify-center">
+                  {challenge.icon}
+                </div>
+                <div className="w-full md:w-2/3 text-center md:text-left">
+                  <h2 className="text-[#005071] text-2xl font-bold mb-4">{challenge.title}</h2>
+                  <p className="text-gray-600 text-lg">{challenge.description}</p>
                 </div>
               </div>
+              {index !== challenges.length - 1 && <LineSeparator />}
             </div>
           ))}
         </div>
