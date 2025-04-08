@@ -16,16 +16,16 @@ const PageHeader: FC<PageHeaderProps> = ({ title, description, backgroundImage =
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         marginTop: '-6.5rem',
-        paddingTop: '6.5rem',
-        height: '60vh',
+        // paddingTop: '6.5rem',
+        height: '65vh',
       }}
     >
       <div className="absolute inset-0 bg-black/50" /> {/* Add overlay for better text visibility */}
-      <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-[90rem] mx-auto px-4 md:px-8 py-12 md:py-16">
-        <h1 className="text-[2rem] md:text-[2.75rem] font-[900] text-white mb-6 md:mb-10 font-roboto leading-[2.75rem] md:leading-[4.5rem] tracking-[0%]">
+      <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-[90rem] mx-auto px-4 md:px-8 py-8 md:py-12 lg:py-16">
+        <h1 className="text-[#FFF] font-roboto text-[39px] font-[900] leading-[70px] mb-4 md:mb-6 lg:mb-10">
           {title}
         </h1>
-        <p className="text-[#FFFFFF] text-[1.25rem] md:text-[2.25rem] font-[300] leading-[1.75rem] md:leading-[3rem] tracking-[0%] w-full max-w-[75rem] mx-auto text-center font-roboto">
+        <p className="text-[#FFF] text-center font-roboto text-[34px] font-[300] leading-[46px] w-full max-w-[75rem] mx-auto">
           {description}
         </p>
       </div>
