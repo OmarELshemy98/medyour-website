@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { benefits } from '../data/benefits';
 import BenefitCard from './BenefitCard';
-import LineSeparator from './LineSeparator';
+import { LineSeparator } from '@/components/shared/Separators'; // Use a module alias or relative path
 
 const BenefitsList: FC = () => {
   return (

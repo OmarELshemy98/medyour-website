@@ -10,7 +10,7 @@ const ServicesPage: FC = () => {
       {/* Header Section */}
       <PageHeader 
         title="Our Services"
-        description="Our innovative mobile app along with our digital healthcare system is used to solve real-world issues, built for rapid population scaling to give access to healthcare services at a low cost"
+        description="An intuitive mobile app designed to simplify healthcare. Users can quickly browse available services, find the best providers nearby or within the network, and access health information all in one easy-to-use platform, with support at every step of the healthcare journey."
       />
 
       <div className="max-w-6xl mx-auto py-20 px-4">

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-const LineSeparator: FC = () => (
+export const LineSeparator: FC = () => (
   <div className="flex items-center w-full mt-8">
     <div className="flex-1" style={{ 
       borderTop: '2px dashed #3A6070',
@@ -24,4 +24,8 @@ const LineSeparator: FC = () => (
   </div>
 );
 
-export default LineSeparator;
+export const DottedSeparator: FC = () => (
+  <div className="w-full my-8">
+    <div className="border-t-2 border-dashed border-gray-200"></div>
+  </div>
+);

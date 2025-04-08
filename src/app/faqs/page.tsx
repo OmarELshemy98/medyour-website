@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import type { FC } from 'react';
 import PageHeader from '@/components/shared/PageHeader';
+import { LineSeparator } from '@/components/shared/Separators'; // Import the separator
 
 const FAQsPage: FC = () => {
   const faqs = [
@@ -24,7 +25,7 @@ const FAQsPage: FC = () => {
     <div className="min-h-screen bg-white">
       <PageHeader 
         title="Frequently Asked Questions"
-        description="MedYour is dedicated to addressing significant challenges in the healthcare landscape"
+        description="MedYour is dedicated to addressing significant challenges in <br /> the healthcare landscape"
       />
 
       <div className="max-w-[1200px] mx-auto px-4 py-8 sm:py-16">
@@ -42,27 +43,7 @@ const FAQsPage: FC = () => {
                 </div>
               </div>
               {index !== faqs.length - 1 && (
-                <div className="flex items-center w-full mt-8">
-                  <div className="flex-1" style={{ 
-                    borderTop: '1px dashed #3A6070',
-                    opacity: 0.2,
-                    backgroundSize: '20px 1px',
-                    backgroundPosition: 'top',
-                    height: '1px'
-                  }}></div>
-                  <div className="flex items-center">
-                    <div className="w-[1px] h-[8px] bg-[#3A6070]"></div>
-                    <div className="w-[200px] sm:w-[493px] border-t border-[#3A6070]"></div>
-                    <div className="w-[1px] h-[8px] bg-[#3A6070]"></div>
-                  </div>
-                  <div className="flex-1" style={{ 
-                    borderTop: '1px dashed #3A6070',
-                    opacity: 0.2,
-                    backgroundSize: '20px 1px',
-                    backgroundPosition: 'top',
-                    height: '1px'
-                  }}></div>
-                </div>
+                <LineSeparator />
               )}
             </div>
           ))}

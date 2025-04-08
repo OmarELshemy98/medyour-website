@@ -37,7 +37,7 @@ const ChallengesPage: FC = () => {
     <main className="min-h-screen bg-white">
       <PageHeader 
         title="Healthcare Challenges"
-        description="MedYour is dedicated to addressing significant challenges in the healthcare landscape"
+        description="MedYour is dedicated to addressing significant challenges in <br /> the healthcare landscape"
       />
 
       <div className="max-w-6xl mx-auto py-20 px-4">

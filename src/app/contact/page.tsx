@@ -6,6 +6,7 @@ import type { FC } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import PageHeader from '@/components/shared/PageHeader';
+import { LineSeparator } from '@/components/shared/Separators'; // Update the import path
 
 const ContactPage: FC = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +26,7 @@ const ContactPage: FC = () => {
     <div className="min-h-screen bg-white">
       <PageHeader 
         title="Get in Touch"
-        description="We're here to help! For inquiries, please fill out our contact form or reach us directly"
+        description="We're here to help! For inquiries, please fill out our contact <br /> form or reach us directly"
       />
 
       <div className="max-w-2xl mx-auto px-4 py-6 sm:py-16">
@@ -83,27 +84,7 @@ const ContactPage: FC = () => {
         </form>
 
         <div className="relative mt-8">
-          <div className="flex items-center w-full mb-8">
-            <div className="flex-1" style={{ 
-              borderTop: '1px dashed #3A6070',
-              opacity: 0.2,
-              backgroundSize: '20px 1px',
-              backgroundPosition: 'top',
-              height: '1px'
-            }}></div>
-            <div className="flex items-center">
-              <div className="w-[1px] h-[8px] bg-[#3A6070]"></div>
-              <div className="w-[493px] border-t border-[#3A6070]"></div>
-              <div className="w-[1px] h-[8px] bg-[#3A6070]"></div>
-            </div>
-            <div className="flex-1" style={{ 
-              borderTop: '1px dashed #3A6070',
-              opacity: 0.2,
-              backgroundSize: '20px 1px',
-              backgroundPosition: 'top',
-              height: '1px'
-            }}></div>
-          </div>
+          <LineSeparator /> {/* Use LineSeparator or DottedSeparator as needed */}
           <h2 className="text-[#003439] text-xl font-semibold mb-2 mt-8">Follow Us:</h2>
           <p className="text-gray-700 mb-8">
             Stay connected with us: for the latest updates and community initiatives.

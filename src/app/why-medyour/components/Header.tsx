@@ -4,8 +4,8 @@ const Header = () => {
   return (
     <PageHeader 
       title="Why Choose MedYour?"
-      description="MedYour is dedicated to addressing significant challenges in the healthcare landscape"
-    />
+      description="MedYour is dedicated to addressing significant challenges in <br /> the healthcare landscape"
+      />
   );
 };
 
