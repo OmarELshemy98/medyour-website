@@ -6,7 +6,7 @@ import BenefitsList from './components/BenefitsList';
 
 const WhyMedYourPage: FC = () => {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white relative">
       <Header />
       <BenefitsList />
     </main>
