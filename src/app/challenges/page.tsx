@@ -7,7 +7,7 @@ import CostIcon from './components/icons/CostIcon';
 import InclusivityIcon from './components/icons/InclusivityIcon';
 import FinancialIcon from './components/icons/FinancialIcon';
 import AdminIcon from './components/icons/AdminIcon';
-import ProviderIcon from './components/icons/ProviderIcon'; // Import the ProviderIcon
+import ProviderIcon from './components/icons/ProviderIcon';
 
 const ChallengesPage: FC = () => {
   const challenges = [
@@ -34,7 +34,7 @@ const ChallengesPage: FC = () => {
     {
       title: "Provider Accessibility",
       description: "Access to healthcare providers is made easier, helping individuals connect with the care they need.",
-      icon: <ProviderIcon /> // Use the ProviderIcon
+      icon: <ProviderIcon />
     }
   ];
 
@@ -49,14 +49,12 @@ const ChallengesPage: FC = () => {
         <div className="space-y-16">
           {challenges.map((challenge, index) => (
             <div key={index} className="flex flex-col items-center">
-              <div className="flex flex-col md:flex-row items-center gap-8">
-                <div className="w-full md:w-1/3 flex justify-center">
+              <div className="flex flex-col items-center gap-8">
+                <h2 className="text-[#123D46] font-roboto text-[33px] font-normal leading-[70px]">{challenge.title}</h2>
+                <div className="w-full flex justify-center">
                   {challenge.icon}
                 </div>
-                <div className="w-full md:w-2/3 text-center md:text-left">
-                  <h2 className="text-[#005071] text-2xl font-bold mb-4">{challenge.title}</h2>
-                  <p className="text-gray-600 text-lg">{challenge.description}</p>
-                </div>
+                <p className="text-[#00313B] text-center font-roboto text-[24px] font-normal leading-[38px]">{challenge.description}</p>
               </div>
               {index !== challenges.length - 1 && <LineSeparator />}
             </div>

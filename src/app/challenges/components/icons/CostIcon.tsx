@@ -3,11 +3,11 @@ import { FC } from 'react';
 const CostIcon: FC = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="205"
-    height="205"
-    viewBox="0 0 205 205"
+    width="211"
+    height="211"
+    viewBox="0 0 211 211"
     fill="none"
-    className="w-12 h-12"
+    className="w-48 h-48" // Updated size
   >
     <g clipPath="url(#clip0_2834_566)">
       <path d="M180.957 170.025H24.0427C10.8202 170.025 0 159.205 0 145.979V24.0427C0 10.8202 10.8202 0 24.0427 0H180.954C194.18 0 205 10.8202 205 24.0427V145.979C205 159.205 194.18 170.025 180.957 170.025Z" fill="#E9EDF1"/>
