@@ -3,7 +3,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import PageHeader from '@/components/shared/PageHeader';
-import DecorativeSquares from './components/DecorativeSquares';
 import { LineSeparator } from '@/components/shared/Separators';
 
 const ServicesPage: FC = () => {
@@ -11,7 +10,7 @@ const ServicesPage: FC = () => {
     {
       title: "Mobile App",
       description: "An intuitive software app designed to digitally transform your healthcare experience, offers you a platform to provide healthcare services at a low cost, with a user-friendly mobile app.",
-      image: "/images/services/mobile-app.png"
+      image: "/images/services/mobile-app.png" // This is already correct
     },
     {
       title: "Healthcare Coverage",
@@ -27,7 +26,6 @@ const ServicesPage: FC = () => {
 
   return (
     <main className="min-h-screen bg-white relative">
-      <DecorativeSquares />
       <PageHeader 
         title="Our Services"
         description="An intuitive mobile app designed to simplify healthcare. Users can quickly browse available services, find the best providers nearby or within the network, and access health information all in one easy-to-use platform, with support at every step of the healthcare journey."
