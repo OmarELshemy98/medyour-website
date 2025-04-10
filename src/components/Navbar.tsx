@@ -151,7 +151,7 @@ const Navbar = () => {
             </div>
             {/* Update in mobile menu as well */}
             <div className="flex flex-col items-center px-6 py-8 space-y-6">
-              <Link href="/" className="text-white text-lg hover:text-gray-200 text-center">
+              <Link href="/AboutUs" className="text-white text-lg hover:text-gray-200 text-center">
                 About Us
               </Link>
               <Link href="/services" className="text-white text-lg hover:text-gray-200 text-center">
