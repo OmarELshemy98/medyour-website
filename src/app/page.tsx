@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { LineSeparator } from '@/components/shared/Separators';
 import Testimonials from '@/components/home/Testimonials';
+import VisionValues from '@/components/home/VisionValues';
 
 
 const HomePage: FC = () => {
@@ -62,7 +63,7 @@ const HomePage: FC = () => {
      
 
       {/* Welcome Section */}
-      <div className="py-10 bg-white">
+      <div className="py-10">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <p className="text-[#123D46] text-[18px] text-center font-roboto font-normal leading-[24px]">
            <span className="text-[#123D46] text-[18px] text-center font-roboto font-bold leading-[24px]">Welcome to MedYour,</span>  a pioneering healthcare platform that brings together the best 
@@ -76,7 +77,7 @@ const HomePage: FC = () => {
         </div>
 
       {/* Featured Services */}
-      <div className="py-16 bg-white">
+      <div className="py-16 ">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-start justify-between ">
             <h2 className="text-[31px] font-roboto font-black text-[#123D46] whitespace-nowrap mb-6 md:mb-0">
@@ -163,9 +164,9 @@ const HomePage: FC = () => {
         </div>
 
       {/* Company Overview */}
-      <div className="py-10 bg-gray-50">
+      <div className="py-10 ">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-[31px] text-center font-roboto font-black text-[#123D46] leading-[70px]">Company Overview</h2>
+          <h2 className="text-[31px]  font-roboto font-black text-[#123D46] leading-[70px]">Company Overview</h2>
           <p className="text-[#123D46] text-[18px] font-roboto font-normal leading-[24px]">
             MedYour is a subsidiary of One of the Saudi founded by Arab Companies in the GCC. For over 15 years, we have been at the 
             forefront of delivering excellent healthcare services, with a focus on making healthcare a positive and accessible experience for all clients.
@@ -177,9 +178,9 @@ const HomePage: FC = () => {
         </div>
 
       {/* Mission Statement */}
-      <div className="py-10 bg-white">
+      <div className="py-10 ">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-[31px] text-center font-roboto font-black text-[#123D46] leading-[70px]">Mission Statement</h2>
+          <h2 className="text-[31px]  font-roboto font-black text-[#123D46] leading-[70px]">Mission Statement</h2>
           <p className="text-[#123D46] text-[18px] font-roboto font-normal leading-[24px]">
             MedYour is a subsidiary of One of the Saudi founded by Arab Companies in the GCC. For over 15 years, we have been at the 
             forefront of delivering excellent healthcare services, with a focus on making healthcare a positive and accessible experience for all clients.
@@ -191,67 +192,17 @@ const HomePage: FC = () => {
         </div>
 
       {/* Vision and Values */}
-      <div className="py-16">
+      <div className="py-10">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-[31px] text-center font-roboto font-black text-[#123D46] leading-[70px]">Vision and Values</h2>
-          <p className="text-[#0F3C42] text-lg mb-12 max-w-3xl">
-            The mission is a core value where quality healthcare is accessible to everyone, regardless of their financial status. Our core values reflect our 
-            commitment to care.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div 
-              className="rounded-br-[70px] rounded-tl-[70px] bg-[#4FBBD6] relative h-[320px]"
-              style={{
-                backgroundImage: 'url("/images/home/coverage-network.png")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
-            >
-              <div className="absolute inset-0 p-8 flex flex-col justify-center items-start">
-                <h3 className="text-[17px] font-roboto font-black text-[#394149] leading-[21px] mb-4">Coverage Network</h3>
-                <p className="text-[14px] font-roboto font-normal text-[#394149] leading-[21px]">
-                  A comprehensive network of over 2500 healthcare providers ensures seamless access to top-tier care.
-                </p>
-              </div>
-            </div>
-            
-            {/* Innovation Card */}
-            <div 
-              className="rounded-br-[70px] rounded-tl-[70px] bg-[#DFDFDF] relative h-[320px]"
-              style={{
-                backgroundImage: 'url("/images/home/innovation.png")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'cover'
-              }}
-            >
-              <div className="absolute inset-0 p-8 flex flex-col justify-center items-start">
-                <h3 className="text-[17px] font-roboto font-black text-[#394149] leading-[21px] mb-4">Innovation</h3>
-                <p className="text-[14px] font-roboto font-normal text-[#394149] leading-[21px]">
-                  Utilizing advanced technology to enhance healthcare delivery.
-                </p>
-              </div>
-            </div>
-            
-            {/* Accessibility Card */}
-            <div 
-              className="rounded-br-[70px] rounded-tl-[70px] bg-[#FFAE00] relative h-[320px]"
-              style={{
-                backgroundImage: 'url("/images/home/accessibility.png")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
-            >
-              <div className="absolute inset-0 p-8 flex flex-col justify-center items-start">
-                <h3 className="text-[17px] font-roboto font-black text-[#394149] leading-[21px] mb-4">Accessibility</h3>
-                <p className="text-[14px] font-roboto font-normal text-[#394149] leading-[21px]">
-                  Removing barriers to ensure everyone has the care they need.
-                </p>
-              </div>
-            </div>
-          </div>
+          <h2 className="text-[31px]  font-roboto font-black text-[#123D46] leading-[70px]">Vision and Values</h2>
+          <p className="text-[#123D46] text-[18px] font-roboto font-normal leading-[24px]">
+          The mission is a core value where quality healthcare is accessible to everyone, 
+          regardless of their financial status. Our core values reflect our commitment to care.
+            </p>
         </div>
       </div>
+      <VisionValues />
+      
       <div className="max-w-6xl mx-auto">
           <LineSeparator />
         </div>

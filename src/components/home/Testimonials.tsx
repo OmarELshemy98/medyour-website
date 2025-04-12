@@ -13,18 +13,18 @@ const testimonials: Testimonial[] = [
   {
     text: "MedYour has completely changed how I manage my family's healthcare. The mobile app is intuitive, and the support is exceptional. I can't imagine going back to the old way!",
     author: "Fatima R.",
-    bgColor: "#4FBBD6", // Cyan color from screenshot
+    bgColor: "#49D8EB", // Cyan color from screenshot
   },
   {
     text: "As a corporate partner, I value MedYour's commitment to comprehensive coverage for my employees. Their proactive support and efficient systems truly set them apart in the healthcare industry",
     author: "Omar T.",
     role: "Corporate Executive",
-    bgColor: "#7CE495", // Green color from screenshot
+    bgColor: "#84F5C4", // Green color from screenshot
   },
   {
     text: "MedYour's approach to healthcare is refreshing. The transparency and ease of access have made a world of difference in my family's healthcare journey",
     author: "Layla A.",
-    bgColor: "#FFF4BF", // Yellow color from screenshot
+    bgColor: "#FFF0004A",
   },
 ];
 
@@ -47,7 +47,7 @@ const QuoteClose = () => (
 const Testimonials: React.FC = () => {
   return (
     <section className="py-12 px-4 md:px-6 lg:px-8 max-w-6xl mx-auto">
-      <h2 className="text-[1.94rem] font-black text-center text-[#123D46] mb-10">
+      <h2 className="text-[2.0625rem] font-normal text-center text-[#123D46] mb-10 font-roboto leading-[4.375rem]">
         Client Testimonials
       </h2>
 
@@ -55,7 +55,10 @@ const Testimonials: React.FC = () => {
         {testimonials.map((item, index) => (
           <div 
             key={index} 
-            className="relative rounded-tl-[1.875rem] rounded-br-[1.875rem] text-center min-h-[12.5rem] flex flex-col items-center justify-center p"
+            className={`relative ${
+              index === 1 ? 'rounded-bl-[1.875rem] rounded-tr-[1.875rem]' 
+              : 'rounded-tl-[1.875rem] rounded-br-[1.875rem]'
+            } text-center min-h-[12.5rem] flex flex-col items-center justify-center`}
             style={{ backgroundColor: item.bgColor }}
           >
             <QuoteOpen />
