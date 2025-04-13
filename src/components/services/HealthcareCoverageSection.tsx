@@ -18,10 +18,13 @@ const HealthcareCoverageSection = () => {
               priority
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 75vw"
             />
+            {/* Animated squares */}
+                       <div className="absolute -bottom-4 -left-6 w-6 h-6  bg-[#00FBFF] animate-float  opacity-80"></div>
+
           </div>
         </div>
-        <p className="text-[#00313B] text-center font-roboto text-[1rem] md:text-[1.125rem] font-normal leading-[1.25rem] md:leading-[1.5rem] max-w-2xl mx-auto px-4 md:px-0">
-          Our healthcare plans provide a wide range of medical services and treatments, ensuring comprehensive coverage for all your healthcare needs.
+        <p className="text-[#00313B] text-center font-roboto text-[18px] font-normal leading-[24px] max-w-2xl mx-auto px-4 md:px-0">
+          Comprehensive healthcare plans tailored to meet the diverse needs of individuals and corporates alike. With competitive rates and no hidden fees, quality healthcare is made accessible to all.
         </p>
       </div>
     </div>
