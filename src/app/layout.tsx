@@ -22,14 +22,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body 
-        className={geistSans.className}
-        style={{
-          backgroundImage: `url('/images/backgroundImg.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'top',
-          backgroundRepeat: 'no-repeat',
-          backgroundAttachment: 'fixed'
-        }}
+        // className={geistSans.className}
+        // style={{
+        //   backgroundImage: `url('/images/backgroundImg.png')`,
+        //   backgroundSize: 'cover',
+        //   backgroundPosition: 'top',
+        //   backgroundRepeat: 'no-repeat',
+        //   backgroundAttachment: 'fixed'
+        // }}
       >
         <NavbarProvider>
           <Navbar />
