@@ -14,11 +14,14 @@ const ServicesPage: FC = () => {
       <PageHeader 
         title="Our Services"
         description="An intuitive mobile app designed to simplify healthcare. Users can quickly browse available services, find the best providers nearby or within the network, and access health information all in one easy-to-use platform, with support at every step of the healthcare journey."
+        className="px-4 md:px-6 lg:px-8 py-8 md:py-12"
       />
 
       <div className="mx-auto">
         <div className="space-y-16">
-          <MobileAppSection />
+          <div className="bg-[rgba(0, 255, 212, 0.11)]">
+            <MobileAppSection />
+          </div>
           <div className="max-w-6xl w-full mx-auto">
             <LineSeparator />
           </div>
