@@ -154,28 +154,28 @@ const Navbar = () => {
             </div>
             {/* Update in mobile menu as well */}
             <div className="flex flex-col items-center px-6 py-8 space-y-6">
-              <Link href="/AboutUs" className="text-white text-lg hover:text-gray-200 text-center">
-                About Us
-              </Link>
-              <Link href="/services" className="text-white text-lg hover:text-gray-200 text-center">
-                Services
-              </Link>
-              <Link href="/challenges" className="text-white text-lg hover:text-gray-200 text-center">
-                Healthcare Challenges
-              </Link>
-              <Link href="/why-medyour" className="text-white text-lg hover:text-gray-200 text-center">
-                Why MedYour?
-              </Link>
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-white text-lg hover:text-gray-200 text-center"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
               <div className="flex flex-col space-y-4 pt-8 w-full max-w-xs">
                 <Link 
                   href="/contact" 
                   className="bg-white text-[#005071] px-4 py-3 rounded-[1px] text-base text-center"
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Contact Us
                 </Link>
                 <Link 
                   href="/get-started" 
                   className="bg-transparent text-white px-4 py-3 rounded-[1px] text-base text-center border border-white"
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Get Started
                 </Link>
