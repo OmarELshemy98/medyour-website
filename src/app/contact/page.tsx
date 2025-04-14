@@ -76,7 +76,7 @@ const ContactPage: FC = () => {
           <div className="flex justify-end mt-6">
             <button
               type="submit"
-              className="bg-[#123D46] text-white px-10 py-2.5 rounded-md text-[15px] font-[400] leading-6 tracking-[0%] font-roboto hover:bg-[#004c52] transition-colors"
+              className="bg-[#123D46] text-white px-10 py-1.5 rounded-md text-[15px] font-[400] leading-6 tracking-[0%] font-roboto hover:bg-[#004c52] transition-colors"
             >
               Send
             </button>
