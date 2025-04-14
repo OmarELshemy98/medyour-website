@@ -16,7 +16,7 @@ const MobileAppSection = () => {
         </h2>
         <div className="w-full flex justify-center relative py-8 md:py-12">
           <div className="relative sm:w-[220px] md:w-[280px] lg:w-[450px] transform">
-            <div className="relative">
+            <div className="">
               <Image
                 src="/images/services/mobile-app.png"
                 alt="Mobile App"
@@ -30,14 +30,14 @@ const MobileAppSection = () => {
             </div>
             {/* Colored squares */}
             {/* Left side squares */}
-            <div className="absolute -top-4 -left-6 w-5 h-5 bg-yellow-300 animate-float opacity-80"></div>
-            <div className="absolute top-1/3 -left-8 w-6 h-6 bg-green-400 animate-float-delay  opacity-80"></div>
-            <div className="absolute bottom-1/4 -left-6 w-4 h-4 bg-[#8CE2FF] animate-float blur-[2px] opacity-80"></div>
+            <div className="hidden md:block absolute -top-4 -left-6 w-5 h-5 bg-yellow-300 animate-float opacity-80"></div>
+            <div className="hidden md:block absolute top-1/3 -left-8 w-6 h-6 bg-green-400 animate-float-delay  opacity-80"></div>
+            <div className="hidden md:block absolute bottom-1/4 -left-6 w-4 h-4 bg-[#8CE2FF] animate-float blur-[2px] opacity-80"></div>
             
             {/* Right side squares */}
-            <div className="absolute -top-8 -right-8 w-5 h-5 bg-[#FF00FB] animate-float  opacity-80"></div>
-            <div className="absolute top-1/2 -right-10 w-6 h-6 bg-[#00FF90] animate-float-delay blur-[1px] opacity-80"></div>
-            <div className="absolute -bottom-4 -right-6 w-4 h-4 bg-[#8CE2FF] animate-float-delay opacity-80"></div>
+            <div className="hidden md:block absolute -top-8 -right-8 w-5 h-5 bg-[#FF00FB] animate-float  opacity-80"></div>
+            <div className="hidden md:block absolute top-1/2 -right-10 w-6 h-6 bg-[#00FF90] animate-float-delay blur-[1px] opacity-80"></div>
+            <div className="hidden md:block absolute -bottom-4 -right-6 w-4 h-4 bg-[#8CE2FF] animate-float-delay opacity-80"></div>
            
           </div>
         </div>

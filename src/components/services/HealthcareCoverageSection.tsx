@@ -19,13 +19,13 @@ const HealthcareCoverageSection = () => {
               sizes="(max-width: 640px) 100vw, (max-width: 768px) 75vw, (max-width: 1024px) 80vw, 75vw"
             />
             {/* Animated squares */}
-            <div className="absolute top-2 left-2 w-4 h-4 bg-[#00FBFF] animate-float opacity-80"></div>
-            <div className="absolute top-1/4 left-8 w-5 h-5 bg-[#00FF90] animate-float-delay opacity-80"></div>
-            <div className="absolute bottom-2 left-4 w-6 h-6 bg-[#8CE2FF] animate-float opacity-80"></div>
+            <div className=" hidden md:block absolute top-2 left-2 w-4 h-4 bg-[#00FBFF] animate-float opacity-80"></div>
+            <div className="hidden md:block absolute top-1/4 left-8 w-5 h-5 bg-[#00FF90] animate-float-delay opacity-80"></div>
+            <div className="hidden md:block absolute bottom-2 left-4 w-6 h-6 bg-[#8CE2FF] animate-float opacity-80"></div>
             
-            <div className="absolute top-2 right-2 w-4 h-4 bg-[#FF00FB] animate-float-delay opacity-80"></div>
-            <div className="absolute top-2/3 right-8 w-5 h-5 bg-[#00FF90] animate-float opacity-80"></div>
-            <div className="absolute bottom-2 right-4 w-6 h-6 bg-[#8CE2FF] animate-float-delay opacity-80"></div>
+            <div className="hidden md:block absolute top-2 right-2 w-4 h-4 bg-[#FF00FB] animate-float-delay opacity-80"></div>
+            <div className="hidden md:block absolute top-2/3 right-8 w-5 h-5 bg-[#00FF90] animate-float opacity-80"></div>
+            <div className="hidden md:block absolute bottom-2 right-4 w-6 h-6 bg-[#8CE2FF] animate-float-delay opacity-80"></div>
           </div>
         </div>
         <p className="text-[#00313B] text-center font-roboto text-[18px] font-normal leading-[24px] max-w-2xl mx-auto px-4 md:px-0">

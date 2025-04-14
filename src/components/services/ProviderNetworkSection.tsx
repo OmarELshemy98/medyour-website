@@ -20,13 +20,13 @@ const ProviderNetworkSection = () => {
             />
             {/* Animated squares */}
             {/* Left side squares */}
-            <div className="absolute top-0 -left-2 w-5 h-5 bg-yellow-300 animate-float opacity-80"></div>
-            <div className="absolute top-1/2 -translate-y-10 -left-8 w-6 h-6 bg-[#00FF90] animate-float-delay opacity-80"></div>
-            <div className="absolute  left-8 w-4 h-4 bg-[#8CE2FF] animate-float blur-[2px] opacity-80"></div>
+            <div className="hidden md:block absolute top-0 -left-2 w-5 h-5 bg-yellow-300 animate-float opacity-80"></div>
+            <div className="hidden md:block absolute top-1/2 -translate-y-10 -left-8 w-6 h-6 bg-[#00FF90] animate-float-delay opacity-80"></div>
+            <div className="hidden md:block absolute  left-8 w-4 h-4 bg-[#8CE2FF] animate-float blur-[2px] opacity-80"></div>
             
             {/* Right side squares */}
-            <div className="absolute top-15 -right-8 w-5 h-5 bg-[#FF00FB] animate-float-delay opacity-80"></div>
-            <div className="absolute top-2/3 -right-8 w-6 h-6 bg-[#8CE2FF] animate-float  opacity-80"></div>
+            <div className="hidden md:block absolute top-15 -right-8 w-5 h-5 bg-[#FF00FB] animate-float-delay opacity-80"></div>
+            <div className="hidden md:block absolute top-2/3 -right-8 w-6 h-6 bg-[#8CE2FF] animate-float  opacity-80"></div>
           
           </div>
         </div>
