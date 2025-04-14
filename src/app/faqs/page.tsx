@@ -28,15 +28,15 @@ const FAQsPage: FC = () => {
         description="MedYour is dedicated to addressing significant challenges in <br /> the healthcare landscape"
       />
 
-      <div className="max-w-[1200px] mx-auto px-4 py-8 sm:py-16">
-        <div className="space-y-12 sm:space-y-20">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+        <div className="space-y-6 sm:space-y-8 lg:space-y-10">
           {faqs.map((faq, index) => (
             <div key={index}>
-              <div className="pb-8 sm:pb-12">
-                <h3 className="text-[#003439] text-[28px] sm:text-[33px] font-[400] mb-4 sm:mb-6 font-roboto leading-[50px] sm:leading-[70px] tracking-[0%] text-center">
+              <div className="pb-4 sm:pb-6 lg:pb-8">
+                <h3 className="text-[#003439] text-base sm:text-lg lg:text-xl font-medium mb-2 sm:mb-3 lg:mb-4 text-center">
                   {faq.question}
                 </h3>
-                <div className="text-[#003439] text-[22px] sm:text-[27px] font-[400] leading-[28px] sm:leading-[33px] tracking-[0%] text-center font-roboto max-w-[900px] mx-auto">
+                <div className="text-[#003439] text-sm sm:text-base lg:text-lg font-normal leading-5 sm:leading-6 lg:leading-7 text-center mx-auto">
                   {faq.answer.map((line, i) => (
                     <div key={i}>{line}</div>
                   ))}
