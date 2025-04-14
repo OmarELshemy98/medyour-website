@@ -8,7 +8,7 @@ const HealthcareCoverageSection = () => {
           Healthcare Coverage
         </h2>
         <div className="w-full flex justify-center">
-          <div className="relative w-full sm:w-3/4 md:w-4/5 lg:w-3/4 transform rotate-6">
+          <div className="relative w-full sm:w-3/4 md:w-4/5 lg:w-3/4 transform ">
             <Image
               src="/images/services/healthcare-coverage.png"
               alt="Healthcare Coverage"
