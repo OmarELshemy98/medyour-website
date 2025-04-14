@@ -17,6 +17,9 @@ const Navbar = () => {
       setIsScrolled(window.scrollY > 0);
     };
 
+    // Call handleScroll on mount to check initial scroll position
+    handleScroll();
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
