@@ -38,10 +38,10 @@ const Navbar = () => {
   return (
     <nav 
       className={`fixed top-0 z-50 h-[85px] w-full transition-all duration-300 ${
-        isScrolled ? 'bg-[#001218]/95' : 'bg-transparent'
+        pathname === '/' || isScrolled ? 'bg-[#001218]/95' : 'bg-transparent'
       }`}
       style={{
-        backgroundImage: isScrolled ? `url('/images/backgroundImg.png')` : 'none',
+        backgroundImage: pathname === '/' || isScrolled ? `url('/images/backgroundImg.png')` : 'none',
         backgroundSize: 'cover',
         backgroundPosition: 'top',
         backgroundRepeat: 'no-repeat'
