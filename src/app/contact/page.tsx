@@ -31,43 +31,52 @@ const ContactPage: FC = () => {
 
       <div className="max-w-2xl mx-auto px-4 py-6 sm:py-16">
         <form onSubmit={handleSubmit} className="space-y-5">
-          <div className="flex flex-col">
-            <label className="text-[#1C6D71] text-[15px] font-medium mb-2">Phone:</label>
+          <div className="flex flex-col sm:flex-row sm:items-center">
+            <label className="text-[#1C6D71] text-[15px] font-medium mb-2 sm:mb-0 sm:w-1/6">
+              Phone:
+            </label>
             <input
               type="tel"
               placeholder="Add Your Mobile"
-              className="w-full px-4 py-3 rounded-md placeholder-[#A4A4A4] focus:outline-none text-black shadow-sm bg-white border border-[#E8E8E8]"
+              className="w-full sm:w-5/6 px-4 py-3 rounded-md placeholder-[#A4A4A4] focus:outline-none text-black shadow-sm bg-white border border-[#E8E8E8]"
               value={formData.phone}
               onChange={(e) => setFormData({...formData, phone: e.target.value})}
             />
           </div>
 
-          <div className="flex flex-col">
-            <label className="text-[#1C6D71] text-[15px] font-medium mb-2">Email:</label>
+          <div className="flex flex-col sm:flex-row sm:items-center">
+            <label className="text-[#1C6D71] text-[15px] font-medium mb-2 sm:mb-0 sm:w-1/6">
+              Email:
+            </label>
             <input
               type="email"
               placeholder="Add Your Email"
-              className="w-full px-4 py-3 rounded-md placeholder-[#A4A4A4] focus:outline-none text-black shadow-sm bg-white border border-[#E8E8E8]"
+              className="w-full sm:w-5/6 px-4 py-3 rounded-md placeholder-[#A4A4A4] focus:outline-none text-black shadow-sm bg-white border border-[#E8E8E8]"
               value={formData.email}
               onChange={(e) => setFormData({...formData, email: e.target.value})}
             />
           </div>
 
-          <div className="flex flex-col">
-            <label className="text-[#1C6D71] text-[15px] font-medium mb-2">Location:</label>
+          <div className="flex flex-col sm:flex-row sm:items-center">
+            <label className="text-[#1C6D71] text-[15px] font-medium mb-2 sm:mb-0 sm:w-1/6">
+              Location:
+            </label>
             <input
               type="text"
               placeholder="Add Your Address"
-              className="w-full px-4 py-3 rounded-md placeholder-[#A4A4A4] focus:outline-none text-black shadow-sm bg-white border border-[#E8E8E8]"
+              className="w-full sm:w-5/6 px-4 py-3 rounded-md placeholder-[#A4A4A4] focus:outline-none text-black shadow-sm bg-white border border-[#E8E8E8]"
               value={formData.location}
               onChange={(e) => setFormData({...formData, location: e.target.value})}
             />
           </div>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col sm:flex-row sm:items-start">
+            <label className="text-[#1C6D71] text-[15px] font-medium mb-2 sm:mb-0 sm:w-1/6">
+              Message:
+            </label>
             <textarea
               placeholder="Type your message"
-              className="w-full px-4 py-3 rounded-md placeholder-[#A4A4A4] focus:outline-none text-black shadow-sm bg-white border border-[#E8E8E8] h-36 resize-none mt-5"
+              className="w-full sm:w-5/6 px-4 py-3 rounded-md placeholder-[#A4A4A4] focus:outline-none text-black shadow-sm bg-white border border-[#E8E8E8] h-36 resize-none"
               value={formData.message}
               onChange={(e) => setFormData({...formData, message: e.target.value})}
             />
