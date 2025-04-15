@@ -1,0 +1,127 @@
+<nav
+  id="main-navbar"
+  class="fixed top-0 z-50 h-[85px] w-full transition-all duration-300 bg-transparent"
+  style="background-size: cover; background-position: top; background-repeat: no-repeat;"
+>
+  <div class="max-w-[1440px] mx-auto h-full px-6">
+    <div class="flex items-center h-full relative">
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button
+          id="mobile-menu-btn"
+          class="text-white p-2"
+          aria-label="Open menu"
+        >
+          <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none">
+            <rect x="4" y="5" width="16" height="2" fill="currentColor"/>
+            <rect x="4" y="11" width="16" height="2" fill="currentColor"/>
+            <rect x="4" y="17" width="16" height="2" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+      <!-- Logo - Centered on mobile -->
+      <div class="flex-1 flex justify-center md:justify-start md:flex-none">
+        <a href="/" class="block">
+          <img
+            src="/images/logo.png"
+            alt="MedYour Logo"
+            width="150"
+            height="50"
+            class="w-[115px] sm:w-[130px] md:w-[150px] h-auto object-contain"
+            loading="eager"
+          />
+        </a>
+      </div>
+      <!-- Empty div for spacing on mobile -->
+      <div class="w-[40px] md:hidden"></div>
+      <!-- Desktop Nav Links -->
+      <div class="hidden md:flex justify-center flex-1 ml-8">
+        <div class="flex space-x-12 ml-5 mr-5 items-center">
+          <a href="/" class="text-white text-[13px] font-medium hover:text-gray-200">About Us</a>
+          <a href="/services" class="text-white text-[13px] font-medium hover:text-gray-200">Services</a>
+          <a href="/challenges" class="text-white text-[13px] font-medium hover:text-gray-200">Healthcare Challenges</a>
+          <a href="/why-medyour" class="text-white text-[13px] font-medium hover:text-gray-200">Why MedYour?</a>
+        </div>
+      </div>
+      <!-- Action Buttons -->
+      <div class="hidden md:flex items-center gap-3">
+        <a
+          href="/contact"
+          class="bg-white text-[#005071] px-5 py-1.5 rounded-[2px] text-[13px] font-normal hover:bg-gray-50"
+        >
+          Contact Us
+        </a>
+        <a
+          href="/get-started"
+          class="bg-[#001218] text-white px-5 py-1.5 rounded-[2px] text-[13px] font-normal border border-[#002a35] hover:bg-[#001f2d]"
+        >
+          Get Started
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile Menu Overlay -->
+  <div
+    id="mobile-menu"
+    class="fixed top-0 left-0 w-full h-screen md:hidden z-50 overflow-y-auto bg-[#001218] hidden"
+    style="background-image: url('/images/backgroundImg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;"
+  >
+    <div class="flex justify-end p-4">
+      <button id="mobile-menu-close" class="text-white p-2" aria-label="Close menu">
+        <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none">
+          <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+    <div class="flex flex-col items-center px-6 py-8 space-y-6">
+      <a href="/" class="text-white text-lg hover:text-gray-200 text-center mobile-menu-link">About Us</a>
+      <a href="/services" class="text-white text-lg hover:text-gray-200 text-center mobile-menu-link">Services</a>
+      <a href="/challenges" class="text-white text-lg hover:text-gray-200 text-center mobile-menu-link">Healthcare Challenges</a>
+      <a href="/why-medyour" class="text-white text-lg hover:text-gray-200 text-center mobile-menu-link">Why MedYour?</a>
+      <div class="flex flex-col space-y-4 pt-8 w-full max-w-xs">
+        <a href="/contact" class="bg-white text-[#005071] px-4 py-3 rounded-[1px] text-base text-center mobile-menu-link">Contact Us</a>
+        <a href="/get-started" class="bg-transparent text-white px-4 py-3 rounded-[1px] text-base text-center border border-white mobile-menu-link">Get Started</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<script>
+  // Mobile menu open/close logic
+  document.addEventListener('DOMContentLoaded', function () {
+    var menuBtn = document.getElementById('mobile-menu-btn');
+    var menu = document.getElementById('mobile-menu');
+    var closeBtn = document.getElementById('mobile-menu-close');
+    var menuLinks = document.querySelectorAll('.mobile-menu-link');
+
+    if (menuBtn && menu && closeBtn) {
+      menuBtn.addEventListener('click', function () {
+        menu.classList.remove('hidden');
+      });
+      closeBtn.addEventListener('click', function () {
+        menu.classList.add('hidden');
+      });
+      menuLinks.forEach(function(link) {
+        link.addEventListener('click', function () {
+          menu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Scroll background logic
+    var navbar = document.getElementById('main-navbar');
+    function updateNavbarBg() {
+      if (window.scrollY > 0 || window.location.pathname === "/") {
+        navbar.classList.remove('bg-transparent');
+        navbar.classList.add('bg-[#001218]/95');
+        navbar.style.backgroundImage = "url('/images/backgroundImg.png')";
+      } else {
+        navbar.classList.remove('bg-[#001218]/95');
+        navbar.classList.add('bg-transparent');
+        navbar.style.backgroundImage = "none";
+      }
+    }
+    updateNavbarBg();
+    window.addEventListener('scroll', updateNavbarBg);
+  });
+</script>

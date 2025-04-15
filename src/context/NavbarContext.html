@@ -1,0 +1,16 @@
+<!-- NavbarContext is not needed in static HTML. 
+     If you need to control the navbar background, use a global JS variable or direct DOM manipulation. 
+     Example below: -->
+
+<script>
+  // Example: Set navbar background globally
+  window.navbarBackground = '';
+  function setNavbarBackground(background) {
+    window.navbarBackground = background;
+    var navbar = document.getElementById('main-navbar');
+    if (navbar) {
+      navbar.style.background = background;
+    }
+  }
+  // Usage: setNavbarBackground('#001218');
+</script>
